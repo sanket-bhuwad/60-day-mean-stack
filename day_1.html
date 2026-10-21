@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learning HTML/CSS: build a personal profile page with semantic HTML and responsive CSS."
+    />
+    <title>Build a Personal Profile Page | Learning HTML/CSS</title>
+    <style>
+      :root {
+        --navy: #102a43;
+        --blue: #1d5d9b;
+        --muted: #52606d;
+        --line: #d9e2ec;
+        --soft-blue: #eef6ff;
+        --page: #f4f7fb;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--navy);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus-visible {
+        text-decoration: underline;
+      }
+
+      .resume {
+        width: min(1100px, calc(100% - 32px));
+        margin: 32px auto;
+        background: var(--white);
+        box-shadow: 0 10px 35px rgba(16, 42, 67, 0.12);
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 42px 48px;
+        color: var(--white);
+        background: linear-gradient(125deg, #102a43, #1d5d9b);
+      }
+
+      .lesson-label {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 4px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 999px;
+        color: #d9efff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .profile-photo {
+        width: 116px;
+        height: 116px;
+        flex: 0 0 auto;
+        border: 4px solid rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .hero h1 {
+        margin: 0 0 6px;
+        font-size: clamp(2rem, 5vw, 3.25rem);
+        letter-spacing: 0.02em;
+      }
+
+      .hero .role {
+        margin: 0;
+        color: #d9efff;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px 18px;
+        max-width: 470px;
+        font-size: 0.92rem;
+      }
+
+      .contact a {
+        color: var(--white);
+      }
+
+      .contact span {
+        white-space: nowrap;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 12px 48px;
+        border-bottom: 1px solid var(--line);
+        background: var(--white);
+      }
+
+      nav a {
+        padding: 7px 13px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      nav a:hover,
+      nav a:focus-visible {
+        background: var(--soft-blue);
+        text-decoration: none;
+      }
+
+      main {
+        padding: 36px 48px 20px;
+      }
+
+      section {
+        margin-bottom: 34px;
+        scroll-margin-top: 20px;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 18px;
+        color: var(--blue);
+        font-size: 1.35rem;
+        letter-spacing: 0.02em;
+      }
+
+      h2::after {
+        height: 1px;
+        flex: 1;
+        background: var(--line);
+        content: "";
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      .summary {
+        max-width: 900px;
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      .job {
+        position: relative;
+        margin: 0 0 24px 8px;
+        padding: 0 0 0 22px;
+        border-left: 2px solid var(--line);
+      }
+
+      .job::before {
+        position: absolute;
+        top: 4px;
+        left: -7px;
+        width: 12px;
+        height: 12px;
+        border: 2px solid var(--white);
+        border-radius: 50%;
+        background: var(--blue);
+        box-shadow: 0 0 0 1px var(--blue);
+        content: "";
+      }
+
+      .job:last-child {
+        margin-bottom: 0;
+      }
+
+      .job-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 2px;
+      }
+
+      .job h3,
+      .project h4 {
+        margin: 0;
+      }
+
+      .job h3 {
+        font-size: 1.1rem;
+      }
+
+      .date {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .location,
+      .client {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .project {
+        margin-top: 14px;
+      }
+
+      .project h4 {
+        color: var(--navy);
+        font-size: 0.98rem;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin: 5px 0;
+        color: var(--muted);
+      }
+
+      .skill-grid,
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 28px;
+      }
+
+      .skill-group,
+      .detail {
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+      }
+
+      .skill-group strong,
+      .detail strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--navy);
+      }
+
+      .skill-group span,
+      .detail span {
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 18px 48px 28px;
+        color: var(--muted);
+        font-size: 0.85rem;
+        text-align: center;
+      }
+
+      @media (max-width: 700px) {
+        .resume {
+          width: 100%;
+          margin: 0;
+        }
+
+        .hero,
+        main {
+          padding-right: 22px;
+          padding-left: 22px;
+        }
+
+        .hero {
+          align-items: flex-start;
+          flex-direction: column;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .contact {
+          justify-content: flex-start;
+        }
+
+        nav {
+          padding-right: 22px;
+          padding-left: 22px;
+        }
+
+        .skill-grid,
+        .details-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .job-header {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0;
+        }
+
+        footer {
+          padding-right: 22px;
+          padding-left: 22px;
+        }
+      }
+
+      @media print {
+        body {
+          background: var(--white);
+        }
+
+        .resume {
+          width: 100%;
+          margin: 0;
+          box-shadow: none;
+        }
+
+        nav {
+          display: none;
+        }
+
+        .hero {
+          padding: 25px 0;
+          color: var(--navy);
+          background: none;
+        }
+
+        .hero .role,
+        .contact a {
+          color: var(--muted);
+        }
+
+        main {
+          padding: 24px 0 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume">
+      <header class="hero">
+        <img class="profile-photo" src="Sanket.jpg" alt="Portrait of Sanket Bhuwad" />
+        <div>
+          <span class="lesson-label">Learning HTML/CSS · Series 01</span>
+          <h1>Sanket Bhuwad</h1>
+          <p class="role">Build a Personal Profile Page</p>
+        </div>
+        <div class="contact" aria-label="Contact information">
+          <span>+91 8108362962</span>
+          <span><a href="mailto:bhuwadsanket@gmail.com">bhuwadsanket@gmail.com</a></span>
+          <span>Mumbai, India</span>
+          <span>GitHub</span>
+          <span>LinkedIn</span>
+        </div>
+      </header>
+
+      <nav aria-label="Resume sections">
+        <a href="#summary">Summary</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+      </nav>
+
+      <main>
+        <section id="summary">
+          <h2>About This Profile</h2>
+          <p class="summary">
+            Full Stack Software Engineer with 4+ years of experience building scalable web
+            applications using Angular, Node.js, Express.js, TypeScript, and MySQL.
+            Experienced in end-to-end application development, RESTful API integration,
+            performance optimization, and delivering production-ready software in Agile
+            environments. Passionate about clean, maintainable code and user-centric solutions.
+          </p>
+        </section>
+
+        <section id="experience">
+          <h2>Professional Experience</h2>
+          <article class="job">
+            <div class="job-header">
+              <h3>Software Engineer · Web Dreamers</h3>
+              <span class="date">June 2024 – Present</span>
+            </div>
+            <p class="location">Mumbai, India</p>
+            <ul>
+              <li>Develop professional, responsive business websites using HTML5, CSS3, and JavaScript.</li>
+              <li>Build interactive web applications with Angular and TypeScript using reusable components.</li>
+              <li>Translate client requirements and design specifications into functional web features.</li>
+              <li>Implement responsive layouts and cross-browser compatibility across desktop, tablet, and mobile.</li>
+              <li>Maintain existing websites, troubleshoot issues, improve usability, and support deployment.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-header">
+              <h3>Software Engineer · Tech Mahindra</h3>
+              <span class="date">Mar 2022 – Apr 2024</span>
+            </div>
+            <p class="location">Mumbai, India</p>
+            <p class="client">Client: Reliance Industries Limited</p>
+
+            <div class="project">
+              <h4>Project 1: PSSR (Pre-Startup Safety Review System)</h4>
+              <ul>
+                <li>Developed Angular application features supporting pre-startup safety review processes.</li>
+                <li>Built reusable UI components and dynamic forms for checklists and inspection workflows.</li>
+                <li>Implemented form validations and data-handling logic to improve information consistency.</li>
+                <li>Integrated frontend components with backend services through RESTful APIs.</li>
+                <li>Supported approvals, review status tracking, and pending-action workflows.</li>
+              </ul>
+            </div>
+
+            <div class="project">
+              <h4>Project 2: Self Verification</h4>
+              <ul>
+                <li>Developed features for safety verification, operational risk identification, and monitoring.</li>
+                <li>Implemented incident observation and corrective-action workflows for timely risk mitigation.</li>
+                <li>Built reusable Angular components and dynamic forms for verification activities.</li>
+                <li>Worked across FI, OPR, and MR modules to support module-specific processes.</li>
+                <li>Integrated RESTful APIs and validations to maintain data consistency.</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="skills">
+          <h2>Technical Skills</h2>
+          <div class="skill-grid">
+            <div class="skill-group"><strong>Languages</strong><span>JavaScript, TypeScript, HTML5, CSS3</span></div>
+            <div class="skill-group"><strong>Frontend</strong><span>Angular, React, Angular Material, Bootstrap, RxJS</span></div>
+            <div class="skill-group"><strong>Backend</strong><span>Node.js, Express.js, RESTful APIs</span></div>
+            <div class="skill-group"><strong>Databases</strong><span>MySQL, MongoDB</span></div>
+            <div class="skill-group"><strong>Cloud &amp; DevOps</strong><span>Microsoft Azure, Docker, Jenkins, Git, GitHub, CI/CD</span></div>
+            <div class="skill-group"><strong>Core Skills</strong><span>SPA Architecture, Responsive Design, Performance Optimization, Lazy Loading, JWT Authentication, Agile/Scrum</span></div>
+          </div>
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+          <div class="details-grid">
+            <div class="detail"><strong>B.E. Electronics</strong><span>University of Mumbai · 2018 – 2021</span></div>
+            <div class="detail"><strong>Diploma in Electronics</strong><span>MSBTE · 2015 – 2018</span></div>
+            <div class="detail"><strong>SSC</strong><span>Maharashtra State Board · 2015</span></div>
+          </div>
+        </section>
+
+        <section id="certifications">
+          <h2>Certifications &amp; Training</h2>
+          <div class="details-grid">
+            <div class="detail"><strong>Microsoft Azure Fundamentals (AZ-900)</strong><span>Microsoft · View Credential</span></div>
+            <div class="detail"><strong>MEAN Stack Training</strong><span>Tech Mahindra</span></div>
+            <div class="detail"><strong>Industrial Training – EMU Carshed, Kurla</strong><span>Central Railway</span></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Declaration</h2>
+          <p class="summary">This page is the first project in the Learning HTML/CSS series, built with semantic HTML and responsive CSS.</p>
+        </section>
+      </main>
+
+      <footer>&copy; 2026 Sanket Bhuwad &middot; Learning HTML/CSS</footer>
+    </div>
+  </body>
+</html>
