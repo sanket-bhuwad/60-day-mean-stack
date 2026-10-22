@@ -12,3 +12,19 @@ This project is the first lesson in the Learning HTML/CSS series. It demonstrate
 - CSS custom properties, grid, flexbox, and print styles
 
 Open `day_1.html` in a browser to view the page.
+
+## Series 02: Build a registration form
+
+This lesson demonstrates how to create a complete registration form using
+HTML form elements and responsive CSS.
+
+### What this page demonstrates
+
+- Labels connected to accessible form controls
+- Text, email, password, and select inputs
+- Radio buttons and a terms-and-conditions checkbox
+- Required-field and minimum-password-length validation
+- Submit and reset buttons
+- Responsive layout and interactive focus and hover states
+
+Open `day_2.html` in a browser to view the page.
