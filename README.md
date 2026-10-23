@@ -28,3 +28,17 @@ HTML form elements and responsive CSS.
 - Responsive layout and interactive focus and hover states
 
 Open `day_2.html` in a browser to view the page.
+
+## Series 03: Style a registration form
+
+This lesson moves the registration form styles into [day_3.css](day_3.css)
+and practises CSS selectors, colors, fonts, and the box model.
+
+### What this page demonstrates
+
+- External stylesheets and reusable CSS custom properties
+- Element, class, attribute, pseudo-class, and descendant selectors
+- Typography, colors, borders, padding, margins, and shadows
+- Flexbox layout and responsive media queries
+
+Open `day_3.html` in a browser to view the page.
