@@ -42,3 +42,17 @@ and practises CSS selectors, colors, fonts, and the box model.
 - Flexbox layout and responsive media queries
 
 Open `day_3.html` in a browser to view the page.
+
+## Series 04: Build a responsive registration form
+
+Day 4 builds on the styled form and uses Grid, Flexbox, and media queries
+to make the layout mobile-friendly.
+
+### What this page demonstrates
+
+- CSS Grid for the two-column name fields
+- Flexbox for the contact options and action buttons
+- A media query that stacks fields and buttons on small screens
+- Responsive spacing and full-width mobile controls
+
+Open `day_4.html` in a browser to view the page.
