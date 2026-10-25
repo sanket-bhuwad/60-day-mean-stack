@@ -56,3 +56,17 @@ to make the layout mobile-friendly.
 - Responsive spacing and full-width mobile controls
 
 Open `day_4.html` in a browser to view the page.
+
+## Series 05: Practise JavaScript basics
+
+Day 5 introduces JavaScript variables, data types, and operators through 15
+small examples.
+
+### What this practice demonstrates
+
+- `const` and `let` variables
+- Strings, numbers, booleans, arrays, and objects
+- Arithmetic, assignment, comparison, and logical operators
+- Template literals and the ternary operator
+
+Open [JS/day_5.js](JS/day_5.js) in a browser console or run it with Node.js.
