@@ -70,3 +70,17 @@ small examples.
 - Template literals and the ternary operator
 
 Open [JS/day_5.js](JS/day_5.js) in a browser console or run it with Node.js.
+
+## Series 06: Build a grading calculator
+
+Day 6 uses `if/else` statements, comparison operators, and logical operators
+to calculate a letter grade and determine whether a learner has passed.
+
+### What this practice demonstrates
+
+- Validating score and attendance ranges
+- Selecting a letter grade with `if/else if/else`
+- Combining conditions with `&&` and `||`
+- Applying both score and attendance requirements
+
+Open [JS/day_6.js](JS/day_6.js) in a browser console or run it with Node.js.
