@@ -84,3 +84,17 @@ to calculate a letter grade and determine whether a learner has passed.
 - Applying both score and attendance requirements
 
 Open [JS/day_6.js](JS/day_6.js) in a browser console or run it with Node.js.
+
+## Series 07: Practise loops
+
+Day 7 practises `for` loops by calculating sums and factorials and generating
+number patterns.
+
+### What this practice demonstrates
+
+- Repeating a calculation with a `for` loop
+- Accumulating a total for a range of numbers
+- Calculating a factorial
+- Using nested loops to create a number pattern
+
+Open [JS/day_7.js](JS/day_7.js) in a browser console or run it with Node.js.
