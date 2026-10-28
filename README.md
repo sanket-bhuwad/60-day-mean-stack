@@ -1,100 +1,64 @@
-# Learning HTML/CSS
+# 60-Day MEAN Stack Career Restart
 
-## Series 01: Build a personal profile page
+This repository is a structured learning and portfolio workspace for my
+60-day return to professional software development. It is designed to show
+consistent practice, production-minded habits, and progressively stronger
+MEAN stack projects.
 
-This project is the first lesson in the Learning HTML/CSS series. It demonstrates how to combine semantic HTML with responsive CSS to create a personal profile page.
+## Repository map
 
-### What this page demonstrates
+| Track | Focus |
+| --- | --- |
+| [`01-foundations`](01-foundations) | HTML, CSS, accessibility, responsive UI |
+| [`02-javascript`](02-javascript) | JavaScript fundamentals, browser APIs, and algorithms |
+| [`03-mongodb`](03-mongodb) | Data modelling, queries, indexes, and aggregation |
+| [`04-express`](04-express) | REST APIs, middleware, validation, and error handling |
+| [`05-angular`](05-angular) | Components, routing, forms, services, and state |
+| [`06-node`](06-node) | Node.js runtime, tooling, testing, and architecture |
+| [`07-projects`](07-projects) | Integrated MEAN stack portfolio projects |
+| [`docs`](docs) | Roadmap, engineering standards, and learning records |
+| [`assets`](assets) | Shared static assets used by lessons |
 
-- Semantic page structure with `header`, `nav`, `main`, `section`, `article`, and `footer`
-- A responsive layout that adapts to smaller screens
-- Accessible image and navigation labels
-- CSS custom properties, grid, flexbox, and print styles
+## 60-day roadmap
 
-Open `day_1.html` in a browser to view the page.
+The complete day-by-day plan is in [`docs/roadmap.md`](docs/roadmap.md).
+Every lesson should contain a small README describing its objective,
+implementation notes, and how to run it.
 
-## Series 02: Build a registration form
+## Current progress
 
-This lesson demonstrates how to create a complete registration form using
-HTML form elements and responsive CSS.
+- [x] Days 1-4: HTML and CSS foundations
+- [x] Days 5-7: JavaScript fundamentals and loops
+- [ ] Days 8-14: JavaScript problem solving and browser APIs
+- [ ] Days 15-21: MongoDB
+- [ ] Days 22-28: Express and REST APIs
+- [ ] Days 29-42: Angular
+- [ ] Days 43-49: Node.js engineering practices
+- [ ] Days 50-60: Integrated portfolio projects
 
-### What this page demonstrates
+## Running the current exercises
 
-- Labels connected to accessible form controls
-- Text, email, password, and select inputs
-- Radio buttons and a terms-and-conditions checkbox
-- Required-field and minimum-password-length validation
-- Submit and reset buttons
-- Responsive layout and interactive focus and hover states
+JavaScript lessons run without dependencies:
 
-Open `day_2.html` in a browser to view the page.
+```powershell
+node .\02-javascript\day-07-loops\main.js
+```
 
-## Series 03: Style a registration form
+Browser lessons can be opened by opening the `index.html` file inside the
+relevant day folder.
 
-This lesson moves the registration form styles into [day_3.css](day_3.css)
-and practises CSS selectors, colors, fonts, and the box model.
+## Engineering standards
 
-### What this page demonstrates
+- Keep each day focused on one measurable outcome.
+- Use meaningful names and small, reviewable commits.
+- Include validation, error handling, and tests as the stack becomes capable.
+- Do not commit credentials, local environment files, build output, or
+  dependency folders.
+- Record what was learned and what remains unclear in the day's README.
 
-- External stylesheets and reusable CSS custom properties
-- Element, class, attribute, pseudo-class, and descendant selectors
-- Typography, colors, borders, padding, margins, and shadows
-- Flexbox layout and responsive media queries
+## About this repository
 
-Open `day_3.html` in a browser to view the page.
-
-## Series 04: Build a responsive registration form
-
-Day 4 builds on the styled form and uses Grid, Flexbox, and media queries
-to make the layout mobile-friendly.
-
-### What this page demonstrates
-
-- CSS Grid for the two-column name fields
-- Flexbox for the contact options and action buttons
-- A media query that stacks fields and buttons on small screens
-- Responsive spacing and full-width mobile controls
-
-Open `day_4.html` in a browser to view the page.
-
-## Series 05: Practise JavaScript basics
-
-Day 5 introduces JavaScript variables, data types, and operators through 15
-small examples.
-
-### What this practice demonstrates
-
-- `const` and `let` variables
-- Strings, numbers, booleans, arrays, and objects
-- Arithmetic, assignment, comparison, and logical operators
-- Template literals and the ternary operator
-
-Open [JS/day_5.js](JS/day_5.js) in a browser console or run it with Node.js.
-
-## Series 06: Build a grading calculator
-
-Day 6 uses `if/else` statements, comparison operators, and logical operators
-to calculate a letter grade and determine whether a learner has passed.
-
-### What this practice demonstrates
-
-- Validating score and attendance ranges
-- Selecting a letter grade with `if/else if/else`
-- Combining conditions with `&&` and `||`
-- Applying both score and attendance requirements
-
-Open [JS/day_6.js](JS/day_6.js) in a browser console or run it with Node.js.
-
-## Series 07: Practise loops
-
-Day 7 practises `for` loops by calculating sums and factorials and generating
-number patterns.
-
-### What this practice demonstrates
-
-- Repeating a calculation with a `for` loop
-- Accumulating a total for a range of numbers
-- Calculating a factorial
-- Using nested loops to create a number pattern
-
-Open [JS/day_7.js](JS/day_7.js) in a browser console or run it with Node.js.
+This is a public learning portfolio, not a collection of copied tutorials.
+Examples are implemented incrementally and will evolve into production-style
+applications with clear requirements, API contracts, tests, and deployment
+notes.
