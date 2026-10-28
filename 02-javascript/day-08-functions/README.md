@@ -21,7 +21,7 @@ return values, and the difference between module, function, and block scope.
 ## How to run
 
 ```powershell
-node .\02-javascript\day-08-planned\main.js
+node .\02-javascript\day-08-functions\main.js
 ```
 
 ## What I learned
