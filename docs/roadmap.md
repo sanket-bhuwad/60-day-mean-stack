@@ -21,7 +21,7 @@ web fundamentals to a complete full-stack application.
 11. String and number problem solving
 12. DOM selection and events
 13. Form validation and browser storage
-14. Mini project: task tracker
+14. Modern JavaScript: destructuring, spread/rest, template literals, and modules
 
 ## Phase 3: MongoDB (Days 15-21)
 
