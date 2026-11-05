@@ -1,4 +1,4 @@
-# Day 17: Async JavaScript
+# Day 16: Async JavaScript
 
 ## Objective
 
@@ -16,7 +16,7 @@ simulating asynchronous user loading.
 ## How to run
 
 ```powershell
-node .\02-javascript\day-17-async-javascript\main.js
+node .\02-javascript\day-16-async-javascript\main.js
 ```
 
 ## What I learned
