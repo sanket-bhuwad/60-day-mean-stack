@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 20 - Task tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <p class="eyebrow">Day 20</p>
+        <h1>Task tracker</h1>
+        <p class="intro">Search, filter, and manage your learning tasks.</p>
+      </header>
+
+      <section class="tracker" aria-labelledby="tracker-title">
+        <h2 id="tracker-title">My tasks</h2>
+        <form id="task-form" class="task-form">
+          <label>
+            Task
+            <input id="task-title" name="title" type="text" required maxlength="80"
+              placeholder="e.g. Practise array methods" />
+          </label>
+          <label>
+            Category
+            <input id="task-category" name="category" type="text" required maxlength="30"
+              placeholder="JavaScript" />
+          </label>
+          <button type="submit">Add task</button>
+        </form>
+
+        <div class="controls">
+          <label class="search">
+            <span class="sr-only">Search tasks</span>
+            <input id="search-input" type="search" placeholder="Search tasks..." />
+          </label>
+          <div class="filters" role="group" aria-label="Task filters">
+            <button type="button" class="filter active" data-filter="all">All</button>
+            <button type="button" class="filter" data-filter="active">Active</button>
+            <button type="button" class="filter" data-filter="completed">Completed</button>
+          </div>
+        </div>
+
+        <p id="task-status" class="status" role="status" aria-live="polite"></p>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
