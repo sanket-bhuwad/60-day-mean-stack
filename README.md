@@ -62,3 +62,25 @@ This is a public learning portfolio, not a collection of copied tutorials.
 Examples are implemented incrementally and will evolve into production-style
 applications with clear requirements, API contracts, tests, and deployment
 notes.
+
+
+
+Create folder in each JS day as compare to previous and push on github agter complete below all task
+
+Day : 18 Closures & scope
+Practise lexical scope, closures, hoisting and this.
+
+Day 19 : Problem-solving
+Solve 8–10 beginner problems involving strings, arrays and objects.
+
+Day 20 : Revision test
+Rebuild a searchable task tracker without following a tutorial
+
+Day 21 : TypeScript basics
+Use types, interfaces, type inference and type aliases.
+
+Day 22: TypeScript types
+Practise unions, narrowing, optional properties and generics.
+
+Day 23 : Classes & modules
+Use classes and modules; convert JavaScript exercises to TypeScript.

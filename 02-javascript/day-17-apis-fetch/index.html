@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 17 - APIs and fetch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <p class="eyebrow">Day 17</p>
+        <h1>People directory</h1>
+        <p class="intro">
+          This directory loads public data from an API using JavaScript
+          <code>fetch</code>.
+        </p>
+      </header>
+
+      <section class="directory" aria-labelledby="directory-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="directory-title">API users</h2>
+            <p id="status" role="status" aria-live="polite">Loading users...</p>
+          </div>
+          <button id="retry-button" class="retry-button" type="button" hidden>
+            Try again
+          </button>
+        </div>
+
+        <div id="user-list" class="user-list"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
